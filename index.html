@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ДальАвто — Перевозка автомобилей из Владивостока по всей России</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">Даль<span>Авто</span></a>
+        <nav class="nav">
+          <a href="#how" class="nav-link">Как работаем</a>
+          <a href="#routes" class="nav-link">Направления</a>
+          <a href="#why" class="nav-link">Почему мы</a>
+          <a href="#reviews" class="nav-link">Отзывы</a>
+        </nav>
+        <div class="header-right">
+          <a href="tel:+78007007070" class="header-phone">8 800 700-70-70</a>
+          <a href="#order" class="btn btn-accent">Рассчитать цену</a>
+        </div>
+        <button class="burger" id="burger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#how" class="mobile-link">Как работаем</a>
+      <a href="#routes" class="mobile-link">Направления</a>
+      <a href="#why" class="mobile-link">Почему мы</a>
+      <a href="#reviews" class="mobile-link">Отзывы</a>
+      <a href="tel:+78007007070" class="mobile-phone">8 800 700-70-70</a>
+      <a href="#order" class="btn btn-accent" style="width:100%;text-align:center;">Рассчитать цену</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-badge">Работаем с 2010 года</div>
+          <h1>Перевозим авто<br>из <span class="accent">Владивостока</span><br>по всей России</h1>
+          <p class="hero-desc">Собственный автопарк автовозов. Полное страхование груза. Онлайн-трекинг на всём маршруте.</p>
+          <div class="hero-actions">
+            <a href="#order" class="btn btn-accent btn-lg">Рассчитать стоимость</a>
+            <a href="tel:+78007007070" class="btn btn-outline btn-lg">Позвонить</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="map-card">
+            <div class="map-card-header">
+              <span class="map-label">Маршрутная карта</span>
+              <span class="map-live"><span class="map-live-dot"></span>5 направлений</span>
+            </div>
+            <svg class="russia-map" viewBox="0 108 390 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Маршруты из Владивостока -->
+              <path class="rline rl1" pathLength="1" d="M 352,273 Q 195,125 45,180"/>
+              <path class="rline rl2" pathLength="1" d="M 352,273 Q 275,215 192,186"/>
+              <path class="rline rl3" pathLength="1" d="M 352,273 Q 235,205 119,171"/>
+              <path class="rline rl4" pathLength="1" d="M 352,273 Q 195,270 49,262"/>
+              <path class="rline rl5" pathLength="1" d="M 352,273 Q 215,188 82,179"/>
+
+              <!-- Движущиеся точки -->
+              <circle class="rdot rdot1" r="3.5" fill="#FF6B00"/>
+              <circle class="rdot rdot2" r="3.5" fill="#FF6B00"/>
+              <circle class="rdot rdot3" r="3.5" fill="#FF6B00"/>
+              <circle class="rdot rdot4" r="3.5" fill="#FF6B00"/>
+              <circle class="rdot rdot5" r="3.5" fill="#FF6B00"/>
+
+              <!-- Города назначения -->
+              <circle cx="45"  cy="180" r="4.5" fill="rgba(255,255,255,0.15)" stroke="#fff" stroke-width="1.5"/>
+              <circle cx="192" cy="186" r="4.5" fill="rgba(255,255,255,0.15)" stroke="#fff" stroke-width="1.5"/>
+              <circle cx="119" cy="171" r="4.5" fill="rgba(255,255,255,0.15)" stroke="#fff" stroke-width="1.5"/>
+              <circle cx="49"  cy="262" r="4.5" fill="rgba(255,255,255,0.15)" stroke="#fff" stroke-width="1.5"/>
+              <circle cx="82"  cy="179" r="4.5" fill="rgba(255,255,255,0.15)" stroke="#fff" stroke-width="1.5"/>
+
+              <!-- Владивосток (отправление) -->
+              <circle cx="352" cy="273" r="10" fill="#FF6B00" opacity="0.2"/>
+              <circle cx="352" cy="273" r="6"  fill="#FF6B00"/>
+              <circle cx="352" cy="273" r="2.5" fill="#fff"/>
+
+              <!-- Подписи (stroke-knockout: читаются поверх любых линий) -->
+              <text class="clabel" x="347" y="262" text-anchor="end">Владивосток</text>
+              <text class="clabel" x="192" y="177" text-anchor="middle">Новосибирск</text>
+              <text class="clabel" x="119" y="161" text-anchor="middle">Екатеринбург</text>
+              <text class="clabel" x="82"  y="169" text-anchor="middle">Казань</text>
+              <text class="clabel" x="45"  y="170" text-anchor="middle">Москва</text>
+              <text class="clabel" x="49"  y="275" text-anchor="middle">Краснодар</text>
+            </svg>
+
+            <div class="map-legend">
+              <div class="map-leg-item"><span class="leg-dot leg-origin"></span>Владивосток (отправление)</div>
+              <div class="map-leg-item"><span class="leg-dot leg-dest"></span>Города доставки</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-num" data-target="15">0</div>
+          <div class="stat-suffix">+ лет</div>
+          <div class="stat-label">на рынке</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-target="15000">0</div>
+          <div class="stat-suffix">+ авто</div>
+          <div class="stat-label">перевезено</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-target="50">0</div>
+          <div class="stat-suffix">+ городов</div>
+          <div class="stat-label">по всей России</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-target="100">0</div>
+          <div class="stat-suffix">%</div>
+          <div class="stat-label">авто застрахованы</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="how">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Как это работает</h2>
+        <p class="section-sub">Четыре простых шага от заявки до получения авто</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="10" fill="#FF6B00" opacity="0.12"/><path d="M10 12h16M10 18h10M10 24h13" stroke="#FF6B00" stroke-width="2.2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Оставьте заявку</h3>
+          <p>Заполните форму или позвоните. Рассчитаем стоимость за 5 минут</p>
+        </div>
+        <div class="step-arrow">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M8 16h16M18 10l6 6-6 6" stroke="#FF6B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="10" fill="#FF6B00" opacity="0.12"/><rect x="10" y="14" width="16" height="10" rx="2" stroke="#FF6B00" stroke-width="2.2"/><path d="M14 14v-2a4 4 0 018 0v2" stroke="#FF6B00" stroke-width="2.2" stroke-linecap="round"/><circle cx="18" cy="19" r="1.5" fill="#FF6B00"/></svg>
+          </div>
+          <h3>Передайте авто</h3>
+          <p>Принимаем во Владивостоке, осматриваем и фиксируем состояние на фото</p>
+        </div>
+        <div class="step-arrow">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M8 16h16M18 10l6 6-6 6" stroke="#FF6B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="10" fill="#FF6B00" opacity="0.12"/><path d="M8 22h2.5m15 0H28m-4-8h2l2 4H8l2-4h2m4-2h6" stroke="#FF6B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="22" r="2" fill="#FF6B00"/><circle cx="24" cy="22" r="2" fill="#FF6B00"/></svg>
+          </div>
+          <h3>Едем</h3>
+          <p>Отслеживайте местоположение авто онлайн. Уведомления на каждом этапе</p>
+        </div>
+        <div class="step-arrow">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M8 16h16M18 10l6 6-6 6" stroke="#FF6B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <div class="step-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="10" fill="#FF6B00" opacity="0.12"/><path d="M10 18l5 5 11-10" stroke="#FF6B00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Получите авто</h3>
+          <p>Доставляем в ваш город. Принимаете авто — оплачиваете. Всё честно</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROUTES -->
+  <section id="routes" class="routes">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Популярные направления</h2>
+        <p class="section-sub">Из Владивостока в любой город России</p>
+      </div>
+      <div class="routes-grid">
+        <div class="route-card">
+          <div class="route-from">Владивосток</div>
+          <div class="route-arrow-icon">→</div>
+          <div class="route-to">Москва</div>
+          <div class="route-details">
+            <span class="route-time">25–30 дней</span>
+            <span class="route-price">от 45 000 ₽</span>
+          </div>
+          <a href="#order" class="btn btn-sm btn-accent">Заказать</a>
+        </div>
+        <div class="route-card">
+          <div class="route-from">Владивосток</div>
+          <div class="route-arrow-icon">→</div>
+          <div class="route-to">Санкт-Петербург</div>
+          <div class="route-details">
+            <span class="route-time">28–33 дня</span>
+            <span class="route-price">от 48 000 ₽</span>
+          </div>
+          <a href="#order" class="btn btn-sm btn-accent">Заказать</a>
+        </div>
+        <div class="route-card">
+          <div class="route-from">Владивосток</div>
+          <div class="route-arrow-icon">→</div>
+          <div class="route-to">Новосибирск</div>
+          <div class="route-details">
+            <span class="route-time">12–15 дней</span>
+            <span class="route-price">от 28 000 ₽</span>
+          </div>
+          <a href="#order" class="btn btn-sm btn-accent">Заказать</a>
+        </div>
+        <div class="route-card">
+          <div class="route-from">Владивосток</div>
+          <div class="route-arrow-icon">→</div>
+          <div class="route-to">Екатеринбург</div>
+          <div class="route-details">
+            <span class="route-time">18–22 дня</span>
+            <span class="route-price">от 35 000 ₽</span>
+          </div>
+          <a href="#order" class="btn btn-sm btn-accent">Заказать</a>
+        </div>
+        <div class="route-card">
+          <div class="route-from">Владивосток</div>
+          <div class="route-arrow-icon">→</div>
+          <div class="route-to">Краснодар</div>
+          <div class="route-details">
+            <span class="route-time">28–32 дня</span>
+            <span class="route-price">от 50 000 ₽</span>
+          </div>
+          <a href="#order" class="btn btn-sm btn-accent">Заказать</a>
+        </div>
+        <div class="route-card">
+          <div class="route-from">Владивосток</div>
+          <div class="route-arrow-icon">→</div>
+          <div class="route-to">Казань</div>
+          <div class="route-details">
+            <span class="route-time">20–24 дня</span>
+            <span class="route-price">от 38 000 ₽</span>
+          </div>
+          <a href="#order" class="btn btn-sm btn-accent">Заказать</a>
+        </div>
+      </div>
+      <p class="routes-note">Нет вашего города? <a href="#order">Оставьте заявку</a> — рассчитаем индивидуально</p>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section id="why" class="why">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Почему выбирают нас</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="12" fill="#FF6B00"/><path d="M14 20l4 4 8-8" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Собственный автопарк</h3>
+          <p>Не перепродаём заявки. Везём сами на своих автовозах — контролируем каждый этап</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="12" fill="#FF6B00"/><path d="M20 12v8l5 5" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="20" r="9" stroke="#fff" stroke-width="2.5"/></svg>
+          </div>
+          <h3>Чёткие сроки</h3>
+          <p>Называем срок и держим его. Если задержка по нашей вине — компенсация</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="12" fill="#FF6B00"/><path d="M20 13l2.5 5 5.5.8-4 3.9.9 5.5L20 25.7l-4.9 2.5.9-5.5-4-3.9 5.5-.8L20 13z" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Полное страхование</h3>
+          <p>Каждый автомобиль застрахован на полную стоимость. Никаких рисков для вас</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="12" fill="#FF6B00"/><circle cx="20" cy="20" r="6" stroke="#fff" stroke-width="2.5"/><path d="M20 11V9M20 31v-2M11 20H9M31 20h-2M14.1 14.1l-1.4-1.4M27.3 27.3l-1.4-1.4M14.1 25.9l-1.4 1.4M27.3 12.7l-1.4 1.4" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Онлайн-трекинг</h3>
+          <p>Знайте, где ваш автомобиль в любой момент. Уведомления в Telegram или по SMS</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="12" fill="#FF6B00"/><path d="M15 20h10M15 16h10M15 24h6" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><rect x="11" y="12" width="18" height="16" rx="3" stroke="#fff" stroke-width="2.2"/></svg>
+          </div>
+          <h3>Официальный договор</h3>
+          <p>Работаем по договору. Все условия зафиксированы. Никаких устных договорённостей</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="12" fill="#FF6B00"/><path d="M20 12c-4.4 0-8 3.1-8 7 0 2.4 1.3 4.5 3.3 5.8L14 28l4.5-2c.5.1 1 .1 1.5.1 4.4 0 8-3.1 8-7s-3.6-7-8-7z" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Поддержка 24/7</h3>
+          <p>Менеджер на связи в любое время. Ответим на вопрос в течение 15 минут</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDER FORM -->
+  <section id="order" class="order">
+    <div class="container">
+      <div class="order-inner">
+        <div class="order-text">
+          <h2>Рассчитайте стоимость<br>прямо сейчас</h2>
+          <p>Бесплатный расчёт за 5 минут. Менеджер перезвонит и уточнит детали.</p>
+          <ul class="order-perks">
+            <li>Без предоплаты — платите при получении</li>
+            <li>Фиксированная цена, без скрытых доплат</li>
+            <li>Забираем авто с парковки или площадки</li>
+          </ul>
+        </div>
+        <form class="order-form" id="orderForm">
+          <div class="form-group">
+            <label>Город назначения</label>
+            <input type="text" name="city" placeholder="Например: Москва" required>
+          </div>
+          <div class="form-group">
+            <label>Марка и модель авто</label>
+            <input type="text" name="car" placeholder="Например: Toyota Camry 2021" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Ваше имя</label>
+              <input type="text" name="name" placeholder="Иван" required>
+            </div>
+            <div class="form-group">
+              <label>Телефон</label>
+              <input type="tel" name="phone" placeholder="+7 900 000-00-00" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-accent btn-lg btn-full">
+            <span class="btn-text">Рассчитать стоимость</span>
+            <span class="btn-loading" style="display:none">Отправляем...</span>
+          </button>
+          <p class="form-note">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="reviews">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Отзывы клиентов</h2>
+        <p class="section-sub">Более 1 200 довольных клиентов за 15 лет</p>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">Перегонял Лексус из Владивостока в Москву. Всё прошло идеально — авто приехало без единой царапины, даже на пару дней раньше срока. Менеджер на связи был постоянно, уведомления приходили регулярно. Рекомендую!</p>
+          <div class="review-author">
+            <div class="review-avatar">АК</div>
+            <div>
+              <div class="review-name">Алексей Коновалов</div>
+              <div class="review-meta">Москва · Toyota Land Cruiser 200</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">Уже второй раз пользуюсь услугами ДальАвто. Первый раз везли Прадо, теперь Альфард. Цена честная, договор нормальный, никаких неожиданностей. Это важно когда речь идёт о дорогом авто.</p>
+          <div class="review-author">
+            <div class="review-avatar">МС</div>
+            <div>
+              <div class="review-name">Михаил Соловьёв</div>
+              <div class="review-meta">Екатеринбург · Toyota Alphard</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">Купила Хонду ФИТ на торгах во Владивостоке и заказала перевозку в Краснодар. Страшновато было, всё-таки новая машина. Но ребята успокоили, объяснили как всё работает. Авто приехало в отличном состоянии!</p>
+          <div class="review-author">
+            <div class="review-avatar">ЕВ</div>
+            <div>
+              <div class="review-name">Елена Воробьёва</div>
+              <div class="review-meta">Краснодар · Honda Fit</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-inner">
+        <div class="cta-text">
+          <h2>Готовы везти ваш автомобиль?</h2>
+          <p>Звоните или оставьте заявку — ответим за 15 минут</p>
+        </div>
+        <div class="cta-actions">
+          <a href="#order" class="btn btn-accent btn-lg">Оставить заявку</a>
+          <a href="tel:+78007007070" class="btn btn-white btn-lg">8 800 700-70-70</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="/" class="logo logo-white">Даль<span>Авто</span></a>
+          <p>Перевозка автомобилей из Владивостока по всей России с 2010 года</p>
+        </div>
+        <div class="footer-nav">
+          <h4>Навигация</h4>
+          <a href="#how">Как работаем</a>
+          <a href="#routes">Направления</a>
+          <a href="#why">Почему мы</a>
+          <a href="#reviews">Отзывы</a>
+        </div>
+        <div class="footer-contacts">
+          <h4>Контакты</h4>
+          <a href="tel:+78007007070">8 800 700-70-70</a>
+          <a href="mailto:info@dallavto.ru">info@dallavto.ru</a>
+          <p>Владивосток, ул. Транспортная, 1</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 ДальАвто. Все права защищены.</p>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
